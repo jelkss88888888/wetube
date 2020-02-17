@@ -1,0 +1,10 @@
+extends ./layouts/main.pug
+
+block content
+    .form-container
+        form(action=`/videos${routes.uploadVideo}`, method="post", enctype="multipart/form-data")
+            label(for="file") Choose File
+            input(type="file", name="fileURL", id="file", accept="video/*")
+            input(type="text", placeholder="title", name="title")
+            input(type="text", placeholder="description", name="description")
+            input(type="submit", value="upload")
