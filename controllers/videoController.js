@@ -25,7 +25,7 @@ export const postUploadCon = async (req, res) => {
     const newVideo = await Video.create({
         fileUrl : path,
         title,
-        description
+        description,
     });
     console.log(newVideo);
     //To Do : Upload and Save Video

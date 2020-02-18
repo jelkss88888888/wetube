@@ -17,6 +17,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(cookieParser());
 app.use(morganlogger("dev"));
 
+app.use("/uploads", express.static("uploads/"));
+
 app.use(localsMiddleWare);
 
 app.use(routes.home, globalRouter);
